@@ -34,7 +34,7 @@
 body {
   background: var(--paper);
   color: var(--ink);
-  font-family: Archivo, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.0625rem;
   line-height: 1.65;
   margin: 0 auto;
@@ -51,10 +51,15 @@ nav {
 }
 
 nav strong {
-  font-stretch: 125%;
+  font-family: Gabarito, Arial, sans-serif;
   font-weight: 800;
-  font-size: 1.05rem;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
   margin-right: auto;
+}
+
+nav strong mark {
+  padding: 0 0.12em;
 }
 
 nav a {
@@ -78,7 +83,7 @@ nav a:focus-visible {
 }
 
 h1 {
-  font-stretch: 125%;
+  font-family: Gabarito, Arial, sans-serif;
   font-weight: 800;
   font-size: clamp(2.1rem, 6.5vw, 3.3rem);
   line-height: 1.05;
@@ -93,7 +98,7 @@ h1 + p {
 }
 
 h2 {
-  font-stretch: 125%;
+  font-family: Gabarito, Arial, sans-serif;
   font-weight: 700;
   font-size: 1.3rem;
   line-height: 1.3;
