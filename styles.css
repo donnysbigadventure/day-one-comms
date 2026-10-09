@@ -148,3 +148,77 @@ a {
     animation: none !important;
   }
 }
+
+.stage {
+  display: flex;
+  gap: 2.25rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2.75rem 0;
+}
+
+.stage-art {
+  flex: 0 0 200px;
+}
+
+.stage-art svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.stage-copy {
+  flex: 1;
+  min-width: 260px;
+}
+
+.stage h2 {
+  margin: 0 0 0.6rem;
+}
+
+.h2-light {
+  font-weight: 400;
+}
+
+.endline {
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  font-size: 1.15rem;
+}
+
+.wf .card {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 2.5;
+}
+
+.wf .card-faint {
+  fill: var(--paper);
+  stroke: var(--line);
+  stroke-width: 2.5;
+}
+
+.wf .bar {
+  fill: var(--line);
+}
+
+.wf .bar-ink {
+  fill: var(--ink);
+}
+
+.wf .hl {
+  fill: var(--highlight);
+}
+
+.wf .swatch-muted {
+  fill: var(--muted);
+}
+
+.wf .tick {
+  fill: none;
+  stroke: var(--highlight-ink);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
