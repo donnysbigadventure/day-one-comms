@@ -149,6 +149,35 @@ a {
   }
 }
 
+/* The film breaks out of the text column on wide screens; full column width on phones. */
+.film {
+  margin: 2.5rem 0 1rem;
+}
+
+@media (min-width: 760px) {
+  .film {
+    width: min(56rem, calc(100vw - 2.5rem));
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.film video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.film figcaption {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.6rem;
+}
+
 .stage {
   display: flex;
   gap: 2.25rem;
