@@ -21,12 +21,22 @@
   <h1>Short-term internal comms support</h1>
   <p>Hands-on help for comms teams in a pinch. I get across your landscape quickly and start producing output on <mark>day one</mark>. Best for short-term projects, campaign support, or the final stretch before a big event.</p>
 
-  <figure class="film">
-    <video controls playsinline preload="metadata" poster="assets/film/day-one-comms-film-poster.jpg" aria-label="Day One Comms in 68 seconds">
+  <figure class="film-card">
+    <button type="button" class="film-open" aria-haspopup="dialog" aria-controls="film-dialog">
+      <img src="assets/film/day-one-comms-film-poster.jpg" alt="" width="1280" height="720">
+      <span class="film-bar">
+        <span class="film-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="film-label">Watch the film <span class="film-len">68 seconds</span></span>
+      </span>
+    </button>
+  </figure>
+
+  <dialog id="film-dialog" class="film-dialog" aria-label="Day One Comms film">
+    <form method="dialog"><button class="film-close">Close <span aria-hidden="true">&times;</span></button></form>
+    <video controls playsinline preload="none" poster="assets/film/day-one-comms-film-poster.jpg">
       <source src="assets/film/day-one-comms-film.mp4" type="video/mp4">
     </video>
-    <figcaption>Day One Comms in 68 seconds. Made with AI, start to finish.</figcaption>
-  </figure>
+  </dialog>
 
   <h2>What you get</h2>
   <ul>
@@ -45,6 +55,20 @@
 
   <h2>Get in touch</h2>
   <p>Tell me what you're up against and when you need it by: <a href="mailto:hello@dayonecomms.co.uk">hello@dayonecomms.co.uk</a></p>
+
+<script>
+  (() => {
+    const dialog = document.getElementById('film-dialog');
+    const video = dialog.querySelector('video');
+    document.querySelector('.film-open').addEventListener('click', () => {
+      dialog.showModal();
+      video.play().catch(() => {});
+    });
+    // Click on the dark backdrop closes the film.
+    dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+    dialog.addEventListener('close', () => { video.pause(); video.currentTime = 0; });
+  })();
+</script>
 
 </body>
 </html>

@@ -149,33 +149,118 @@ a {
   }
 }
 
-/* The film breaks out of the text column on wide screens; full column width on phones. */
-.film {
-  margin: 2.5rem 0 1rem;
+/* The film: a watch card in the column, playing large in a dark dialog. */
+.film-card {
+  margin: 2.25rem 0 0.5rem;
 }
 
-@media (min-width: 760px) {
-  .film {
-    width: min(56rem, calc(100vw - 2.5rem));
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
+.film-open {
+  all: unset;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--paper);
 }
 
-.film video {
+.film-open img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
-  background: var(--line);
-  border: 1px solid var(--line);
-  border-radius: 10px;
 }
 
-.film figcaption {
+.film-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1.1rem;
+  border-top: 1px solid var(--line);
+}
+
+.film-play {
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--highlight);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 4px;
+  box-sizing: border-box;
+  transition: transform 0.15s ease;
+}
+
+.film-play svg {
+  fill: var(--highlight-ink);
+}
+
+.film-open:hover .film-play {
+  transform: scale(1.07);
+}
+
+.film-open:focus-visible {
+  outline: 3px solid var(--highlight);
+  outline-offset: 3px;
+}
+
+.film-label {
+  font-family: Gabarito, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+
+.film-len {
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-weight: 500;
   color: var(--muted);
-  font-size: 0.9rem;
-  margin-top: 0.6rem;
+  margin-left: 0.4em;
+}
+
+.film-dialog {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  width: min(92vw, 1280px);
+  max-width: none;
+  overflow: visible;
+}
+
+.film-dialog::backdrop {
+  background: rgba(22, 25, 27, 0.94);
+}
+
+.film-dialog video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  background: #000;
+}
+
+.film-dialog video:focus {
+  outline: none;
+}
+
+.film-close {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: -2.6rem;
+  right: 0;
+  color: #fff;
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.3rem 0.4rem;
+}
+
+.film-close:focus-visible {
+  outline: 3px solid var(--highlight);
 }
 
 .stage {
