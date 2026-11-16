@@ -7,54 +7,113 @@
   <meta name="description" content="Short-term, hands-on internal comms support. Content, slide decks, design and internal communications, produced from day one. Openly AI-powered.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="site.css?v=1">
 </head>
 <body>
 
-  <nav>
-    <strong>DAY <mark>ONE</mark> COMMS</strong>
-    <a href="index.html" aria-current="page">Home</a>
-    <a href="how-it-works.html">How it works</a>
-    <a href="bio.html">About</a>
-  </nav>
+  <header class="site-nav">
+    <nav class="container" aria-label="Main">
+      <a class="wordmark" href="index.html">DAY <mark>ONE</mark> COMMS</a>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="bio.html">About</a>
+      <a class="button" href="mailto:hello@dayonecomms.co.uk">Get in touch</a>
+    </nav>
+  </header>
 
-  <h1>Short-term internal comms support</h1>
-  <p>Hands-on help for comms teams in a pinch. I get across your landscape quickly and start producing output on <mark>day one</mark>. Best for short-term projects, campaign support, or the final stretch before a big event.</p>
+  <main>
+    <section class="hero">
+      <div class="container grid">
+        <div>
+          <h1>Short-term internal comms support</h1>
+          <p class="lead">Hands-on help for comms teams in a pinch, from <mark>day one</mark>.</p>
+          <div class="actions">
+            <a class="button" href="mailto:hello@dayonecomms.co.uk">Get in touch</a>
+          </div>
+        </div>
 
-  <figure class="film-card">
-    <button type="button" class="film-open" aria-haspopup="dialog" aria-controls="film-dialog">
-      <img src="assets/film/day-one-comms-film-poster-v6.jpg" alt="" width="1280" height="720">
-      <span class="film-bar">
-        <span class="film-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M8 5v14l11-7z"/></svg></span>
-        <span class="film-label">Watch the film <span class="film-len">68 seconds</span></span>
-      </span>
-    </button>
-  </figure>
+        <figure class="film-card">
+          <button type="button" class="film-open" aria-haspopup="dialog" aria-controls="film-dialog">
+            <img src="assets/film/day-one-comms-film-poster-v6.jpg" alt="" width="1280" height="720">
+            <span class="film-bar">
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="film-label">Watch the film <span class="film-len">68 seconds</span></span>
+            </span>
+          </button>
+        </figure>
+      </div>
+    </section>
 
-  <dialog id="film-dialog" class="film-dialog" aria-label="Day One Comms film">
-    <form method="dialog"><button class="film-close">Close <span aria-hidden="true">&times;</span></button></form>
-    <video controls playsinline preload="none" poster="assets/film/day-one-comms-film-poster-v6.jpg">
-      <source src="assets/film/day-one-comms-film-v6.mp4" type="video/mp4">
-    </video>
-  </dialog>
+    <dialog id="film-dialog" class="film-dialog" aria-label="Day One Comms film">
+      <form method="dialog"><button class="film-close">Close <span aria-hidden="true">&times;</span></button></form>
+      <video controls playsinline preload="none" poster="assets/film/day-one-comms-film-poster-v6.jpg">
+        <source src="assets/film/day-one-comms-film-v6.mp4" type="video/mp4">
+      </video>
+    </dialog>
 
-  <h2>What you get</h2>
-  <ul>
-    <li>Content assets: articles, intranet copy, scripts, toolkits</li>
-    <li>Slide decks, from exec updates to keynotes</li>
-    <li>Design for campaigns, templates and branded materials</li>
-    <li>Video: short animated films and motion graphics, like the one above</li>
-    <li>Internal communications: announcements, leadership comms, change messaging</li>
-  </ul>
+    <section class="get">
+      <div class="container grid">
+        <div class="section-head">
+          <h2>What you get</h2>
+        </div>
+        <ul class="rows section-body">
+          <li><h3>Content assets</h3><p>Articles, intranet copy, scripts, toolkits</p></li>
+          <li><h3>Slide decks</h3><p>From exec updates to keynotes</p></li>
+          <li><h3>Design</h3><p>For campaigns, templates and branded materials</p></li>
+          <li><h3>Video</h3><p>Short animated films and motion graphics, like the one above</p></li>
+          <li><h3>Internal communications</h3><p>Announcements, leadership comms, change messaging</p></li>
+        </ul>
+      </div>
+    </section>
 
-  <h2>Openly AI-powered</h2>
-  <p>I work openly with AI. It's why I'm fast, and I'm happy to show the workings. If it's useful, I can also help your team do the same: pick the right tools and build AI into how the team works day to day.</p>
+    <section class="ai">
+      <div class="container grid">
+        <div class="section-head">
+          <h2>Openly AI-powered</h2>
+        </div>
+        <div class="claim">
+          <p>I work openly with AI. It’s why I’m fast, and I’m happy to show the workings.</p>
+          <p>If it’s useful, I can also help your team do the same: pick the right tools and build AI into how the team works day to day.</p>
+        </div>
+      </div>
+    </section>
 
-  <h2>Where I help most</h2>
-  <p>When you haven't got a business case for a contractor, but you need experienced hands for a short stretch. Someone who can jump in and multiply what your team delivers. No retainer, no onboarding, just high-quality work for a fair price.</p>
+    <section class="band">
+      <div class="container">
+        <h2>Where I help most</h2>
+        <ul class="moments">
+          <li>Short-term projects</li>
+          <li>Campaign support</li>
+          <li>The final stretch before a big event</li>
+        </ul>
+        <p class="detail">When you haven’t got a big agency budget but need experienced hands for a short stretch. Someone who can jump in and multiply what your team delivers. Quick to get going, with high-quality work for a fair price.</p>
+      </div>
+    </section>
 
-  <h2>Get in touch</h2>
-  <p>Tell me what you're up against and when you need it by: <a href="mailto:hello@dayonecomms.co.uk">hello@dayonecomms.co.uk</a></p>
+    <section class="close">
+      <div class="container grid">
+        <div class="close-head">
+          <h2>Get in touch</h2>
+          <p class="ask">Tell me what you’re up against and when you need it by.</p>
+        </div>
+        <div class="address-wrap">
+          <a class="address" href="mailto:hello@dayonecomms.co.uk">hello@dayonecomms.co.uk</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="container">
+      <img src="assets/lockup-stacked.svg" alt="Day One Comms" width="160" height="120">
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="bio.html">About</a>
+        <a href="mailto:hello@dayonecomms.co.uk">hello@dayonecomms.co.uk</a>
+      </nav>
+    </div>
+  </footer>
 
 <script>
   (() => {
