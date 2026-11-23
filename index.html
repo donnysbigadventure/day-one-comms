@@ -7,7 +7,8 @@
   <meta name="description" content="Short-term, hands-on internal comms support. Content, slide decks, design and internal communications, produced from day one. Openly AI-powered.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap">
-  <link rel="stylesheet" href="site.css?v=1">
+  <link rel="stylesheet" href="site.css?v=2">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -26,7 +27,7 @@
       <div class="container grid">
         <div>
           <h1>Short-term internal comms support</h1>
-          <p class="lead">Hands-on help for comms teams in a pinch, from <mark>day one</mark>.</p>
+          <p class="lead">Hands-on help for comms teams in a pinch, from <mark class="sweep">day one</mark>.</p>
           <div class="actions">
             <a class="button" href="mailto:hello@dayonecomms.co.uk">Get in touch</a>
           </div>
@@ -34,10 +35,10 @@
 
         <figure class="film-card">
           <button type="button" class="film-open" aria-haspopup="dialog" aria-controls="film-dialog">
-            <img src="assets/film/day-one-comms-film-poster-v6.jpg" alt="" width="1280" height="720">
+            <video class="film-preview" muted loop playsinline preload="metadata" poster="assets/film/day-one-comms-film-poster-v6.jpg" width="1280" height="720" aria-hidden="true"><source src="assets/film/day-one-comms-film-preview.mp4" type="video/mp4"></video>
             <span class="film-bar">
               <span class="film-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M8 5v14l11-7z"/></svg></span>
-              <span class="film-label">Watch the film <span class="film-len">68 seconds</span></span>
+              <span class="film-label">Watch with sound <span class="film-len">68 seconds</span></span>
             </span>
           </button>
         </figure>
@@ -51,8 +52,52 @@
       </video>
     </dialog>
 
+    <section class="work">
+      <div class="container">
+        <h2 class="reveal">Selected work</h2>
+        <ul class="work-grid">
+          <li class="tile reveal" style="--i: 0">
+            <p class="tile-client">Global vet group</p>
+            <h3>Rolling out a flagship clinical strategy</h3>
+            <p class="tile-line">Films, decks and toolkits that took one clinical strategy to teams in 19 countries.</p>
+            <p class="tile-tags">Campaign, Video, Slide decks</p>
+          </li>
+          <li class="tile reveal" style="--i: 1">
+            <p class="tile-client">Global vet group</p>
+            <h3>Telling the sustainability story</h3>
+            <p class="tile-line">Quarterly sustainability content, from report design to colleague updates.</p>
+            <p class="tile-tags">Content, Design</p>
+          </li>
+          <li class="tile reveal" style="--i: 2">
+            <p class="tile-client">Global vet group</p>
+            <h3>Announcing leadership changes</h3>
+            <p class="tile-line">Announcements for new country CEOs and senior leaders, written for colleagues across markets.</p>
+            <p class="tile-tags">Leadership comms</p>
+          </li>
+          <li class="tile reveal" style="--i: 0">
+            <p class="tile-client">Global vet group</p>
+            <h3>Engaging the senior leadership team</h3>
+            <p class="tile-line">Virtual events and regular written updates for the group’s top leaders.</p>
+            <p class="tile-tags">Events, Exec comms</p>
+          </li>
+          <li class="tile reveal" style="--i: 1">
+            <p class="tile-client">Global vet group</p>
+            <h3>Making security everyone’s job</h3>
+            <p class="tile-line">A 12-month information security awareness campaign for 40,000 colleagues.</p>
+            <p class="tile-tags">Campaign, Design</p>
+          </li>
+          <li class="tile reveal" style="--i: 2">
+            <p class="tile-client">BT Group</p>
+            <h3>Leading digital transformation comms</h3>
+            <p class="tile-line">Internal comms for the COO of BT’s Digital unit, and leading a cross-functional transformation squad.</p>
+            <p class="tile-tags">Exec comms, Change</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="get">
-      <div class="container grid">
+      <div class="container grid reveal">
         <div class="section-head">
           <h2>What you get</h2>
         </div>
@@ -67,7 +112,7 @@
     </section>
 
     <section class="ai">
-      <div class="container grid">
+      <div class="container grid reveal">
         <div class="section-head">
           <h2>Openly AI-powered</h2>
         </div>
@@ -79,7 +124,7 @@
     </section>
 
     <section class="band">
-      <div class="container">
+      <div class="container reveal">
         <h2>Where I help most</h2>
         <ul class="moments">
           <li>Short-term projects</li>
@@ -91,7 +136,7 @@
     </section>
 
     <section class="close">
-      <div class="container grid">
+      <div class="container grid reveal">
         <div class="close-head">
           <h2>Get in touch</h2>
           <p class="ask">Tell me what you’re up against and when you need it by.</p>
@@ -129,6 +174,7 @@
   })();
 </script>
 
+<script src="motion.js?v=1" defer></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "22058b80ae3543c8bf9f6d104d61c646"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
