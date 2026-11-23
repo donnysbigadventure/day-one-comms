@@ -176,8 +176,16 @@ section { padding-block: var(--section-gap-s); }
 .tile::before { content: ""; position: absolute; inset: -3px 0 auto 0; height: 3px; background: var(--color-accent); transform: scaleX(0); transform-origin: left; transition: transform var(--dur-long) var(--ease-out); }
 .tile:hover::before { transform: scaleX(1); }
 .tile-media { aspect-ratio: 16 / 9; margin-bottom: var(--space-md); border-radius: var(--radius-card); overflow: hidden; background: var(--color-paper-2); }
-.tile-media img, .tile-media svg { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-long) var(--ease-out); }
-.tile:hover .tile-media img { transform: scale(1.03); }
+.tile-art { position: relative; width: 100%; height: 100%; transition: transform var(--dur-long) var(--ease-out); }
+.tile-media img, .tile-media svg { display: block; width: 100%; height: 100%; object-fit: cover; }
+.tile:hover .tile-art { transform: scale(1.03); }
+/* Live film loops laid over the film frames drawn into the tile art */
+.tile-film { position: absolute; border-radius: 3px; overflow: hidden; opacity: 0; transition: opacity var(--dur-long) var(--ease-out); }
+.tile-film.is-playing { opacity: 1; }
+.tile-film video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.tile-rail { position: absolute; border-radius: 999px; overflow: hidden; background: #e4e7ea; opacity: 0; transition: opacity var(--dur-long) var(--ease-out); }
+.tile-film.is-playing + .tile-rail { opacity: 1; }
+.tile-rail i { position: absolute; inset: 0; background: var(--color-accent); transform: scaleX(0); transform-origin: left; }
 .tile-client { font-weight: 600; color: var(--color-muted); }
 .tile h3 { margin-top: var(--space-xs); font-size: var(--text-title); line-height: 1.2; }
 .tile-line { margin-top: var(--space-sm); color: var(--color-ink-2); }
@@ -189,5 +197,5 @@ section { padding-block: var(--section-gap-s); }
   .js mark.sweep { transition: none; background-size: 100% 100%; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   .tile::before { transition: none; }
-  .tile-media img { transition: none; }
+  .tile-art, .tile-film, .tile-rail { transition: none; }
 }
